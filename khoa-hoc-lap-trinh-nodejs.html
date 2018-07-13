@@ -1,0 +1,442 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns='https://www.w3.org/1999/xhtml' lang="vi">
+
+<!-- Mirrored from khoapham.vn/khoa-hoc-lap-trinh-nodejs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Jul 2018 07:09:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>KHÓA HỌC NODEJS TẠI KHOAPHAM.VN</title>
+    <base  target="_blank, _self, _parent, _top">
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="all" />
+    <meta property="og:image"  content="http://i1.wp.com/khoapham.vn/public/images/nodejs/node-js-development-khoapham.vn.jpg"/>
+
+    <meta name="description" content="Khóa học Lập trình NODEJS từ A-Z tại Khoa Phạm, xây dựng ứng dụng phía SERVER+CLIENT ngay tại lớp học" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="https://i1.wp.com/khoapham.vn/public/images/logo-370.png" type="image/x-icon" />
+    <link href="https://plus.google.com/100712190640819390373" rel="author" />
+    <meta name="DC.title" content="Phạm Trường Đăng Khoa" />
+    <meta name="geo.placename" content="Thành Phố Hồ Chí Minh" />
+    <meta name="geo.position" content="10.779327,106.685153" />
+    <meta name="ICBM" content="10.779327,106.685153" />
+    <link rel="pingback" href="xmlrpc.html" />
+
+    <!--  -->
+    <meta name="google-site-verification" content="tOiBjDczX4lageu9kJ3lDz7KDvSkgLH4fOIehzv8Xec" />
+
+    <link rel="canonical" href="khoa-hoc-lap-trinh-nodejs.html">
+    <!-- <meta HTTP-EQUIV="REFRESH" CONTENT="90; URL=https://khoapham.vn/khoa-hoc-lap-trinh-nodejs.html"> -->
+
+    <link rel="alternate" hreflang="vi" href="khoa-hoc-lap-trinh-nodejs.html" />
+
+
+    <meta name="mobile-web-app-capable" content="yes">
+<!--[if gte IE 9]>
+<meta name="application-name" content="Khoa Phạm"/>
+<meta name="msapplication-tooltip" content="Trung tâm đào tạo tin học Khoa Phạm"/>
+<meta name="msapplication-window" content="width=1600;height=1200"/>
+<meta name="msapplication-starturl" content="http://khoapham.vn/"/>
+<meta name="msapplication-navbutton-color" content="#202020"/>
+<![endif]-->
+
+<meta property="fb:app_id" content="193765474475887" />
+<meta property="og:site_name" content="khoapham.vn" />
+<meta property='og:title' content='Trung tâm đào tạo tin học Khoa Phạm' /> 
+<meta property="og:description" content="Khóa học Lập trình NODEJS từ A-Z tại Khoa Phạm, xây dựng ứng dụng phía SERVER+CLIENT ngay tại lớp học"/>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@khoapham" />
+<meta name="twitter:creator" content="@khoapham" />
+<meta name="twitter:app:name:iphone" content="Khoa Pham Training" />
+<meta name="twitter:app:id:iphone" content="id1172888991" />
+<meta name="twitter:app:name:ipad" content="Khoa Pham Training" />
+<meta name="twitter:app:id:ipad" content="id1172888991" />
+<meta name="twitter:app:name:googleplay" content="Khoa Pham Training" />
+<meta name="twitter:app:id:googleplay" content="com.tienminh.kpt.khoaphamapp" />
+
+<meta content='photo' name='twitter:card' ta-doc-meta='true'/>
+<meta content='Trung tâm đào tạo tin học Khoa Phạm' data-doc-meta='true' name='twitter:title'/>
+<meta content='https://i1.wp.com/khoapham.vn/public/images/nodejs/node-js-development-khoapham.vn.jpg' data-doc-meta='true' name='twitter:image'/>
+<meta content='1200' data-doc-meta='true' name='twitter:image:width'/>
+<meta content='630' data-doc-meta='true' name='twitter:image:height'/>
+<meta content='https://khoapham.vn/khoa-hoc-lap-trinh-nodejs.html' data-doc-meta='true' name='twitter:url'/>
+<meta content='Khóa học Lập trình NODEJS từ A-Z tại Khoa Phạm, xây dựng ứng dụng phía SERVER+CLIENT ngay tại lớp học' data-doc-meta='true' name='twitter:description'/>
+
+<meta property="og:image" content="https://i1.wp.com/khoapham.vn/public/images/nodejs/node-js-development-khoapham.vn.jpg"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="khoa-hoc-lap-trinh-nodejs.html" />
+<meta property="article:author" content="Phạm Trường Đăng Khoa" />
+
+<!--  -->
+
+
+
+<!-- Stylesheets -->
+<link href="public/css/bootstrap.min.css" rel="stylesheet">
+<link href="public/css/revolution-slider.css" rel="stylesheet">
+<link href="public/css/style.css" rel="stylesheet">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="public/css/bootstrap-margin-padding.css" rel="stylesheet">
+<link href="public/css/responsive.css" rel="stylesheet">
+<link href="public/css/huong-style.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="public/js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header -->
+    <header class="main-header" id="main-header">
+    	<!-- Header Top -->
+    	<div class="header-top">
+        	<div class="auto-container clearfix">
+            	<!-- Top Left -->
+                <!-- Top Right -->
+                <div class="top-right">
+                	<ul class="clearfix">
+
+                    	<li><a href="#"><span class="fa fa-phone"></span> 0942764080</a></li>
+                        <li><a href="mailto:khoaphamtraining@gmail.com"><span class="fa fa-at"></span> khoaphp@yahoo.com</a></li>
+                        <li><a href="#"><span class="fa fa-map-marker"></span> TPHCM: 90-92 Lê Thị Riêng, P.Bến Thành, Q1, TPHCM</a></li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div><!-- Header Top End -->
+
+        <!-- Header Lower -->
+        <div class="header-lower">
+        	<div class="auto-container clearfix ">
+
+                <!--Outer Box-->
+                <div class="outer-box">
+
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html"><img src="public/images/logo-370.png" alt="Khoa Phạm Training" style="width: 70%"></a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse clearfix" id="menu">
+                          <ul class="navigation">
+                            <li class=""><a href="index.html" class="current">TRANG CHỦ</a>
+                            </li>
+                            <li class=""><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                            <li class=""><a href="lichkhaigiang.html">LỊCH KHAI GIẢNG</a> </li>
+                            <li class="dropdown current"><a href="#">Khóa học đang mở</a>
+                              <ul>
+                                <li><a href="khoa-hoc-forex-binary-options.html">THỊ TRƯỜNG NGOẠI HỐI FOREX & BINARY OPTIONS</a></li>
+                                <li><a href="lap-trinh-mql.html">LẬP TRÌNH MQL 4</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-android.html">LẬP TRÌNH ANDROID (CB + NC)</a></li>
+                                <li><a href="khoa-hoc-laptrinhios.html">LẬP TRÌNH IOS (CB + NC)</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-react-native.html">LẬP TRÌNH REACT NATIVE</a></li>
+                                <li><a href="lap-trinh-php.html">LẬP TRÌNH PHP & MYSQL</a></li>
+                                <li><a href="lap-trinh-php-nang-cao.html">LẬP TRÌNH PHP NÂNG CAO</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-front-end.html">LẬP TRÌNH FRONT END</a></li>
+                                <!-- <li><a href="khoa-hoc-seo-master.html">KHOÁ HỌC SEO MASTER</a></li> -->
+                                <li><a href="khoa-hoc-lap-trinh-nodejs.html">LẬP TRÌNH NODEJS</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-angular.html">LẬP TRÌNH ANGULAR 4</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-web-fullstack-javascript-mean.html">LẬP TRÌNH MEAN - FULL STACK JS</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-android-voi-kotlin.html">LẬP TRÌNH ANDROID VỚI KOTLIN<br>Học miễn phí tại Khoa Phạm Online</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-react-js.html">LẬP TRÌNH REACTJS<br>Học miễn phí tại Khoa Phạm Online</a></li>
+                                <!-- <li><a href="khoa-hoc-lap-trinh-cpp.html">LẬP TRÌNH C++<br>Học miễn phí tại Khoa Phạm Online</a></li> -->
+                                <li><a href="unity.html">LẬP TRÌNH GAME UNITY 3D <br>Học miễn phí tại Khoa Phạm Online</a></li>
+
+                                                              </ul>
+                            </li>
+							<li class="abc "><a href="livecode-khoa-pham.html">LIVECODE<br ><span class="free">Free</span></a></li>
+                            <li class="abc"><a href="http://online.khoapham.vn/" target="_blank">HỌC ONLINE<br><span class="free">Free</span></a>
+                            
+                            </li>
+                            <li class=""><a href="lienhe.html">LIÊN HỆ</a></li>
+                            <!-- <li class=""><a href="dang-ki-hoc.html">ĐĂNG KÍ HỌC</a></li> -->
+                          </ul>
+                        </div>
+                    </nav>
+                    <!-- Main Menu End-->
+                </div>
+            </div>
+        </div><!-- Header Lower End-->
+
+    </header>
+    <!--End Main Header -->
+
+    <!--Page Title-->
+  <section class="page-title" style="background-image:url(public/images/nodejs/node-js-development-khoapham.vn.jpg);">
+      s
+
+      <!--Go Down Button-->
+      <div class="go-down">
+          <div class="curve scroll-to-target" data-target="#sidebar-section"><span class="icon fa fa-arrow-down"></span></div>
+      </div>
+
+  </section>
+
+
+    <!--Desc Box-->
+  <div class="desc-box">
+      <div class="auto-container">
+          <div class="sec-title no-underline">
+
+              <h2>KHÓA HỌC LẬP TRÌNH NODEJS</h2>
+
+          </div>
+      </div>
+  </div>
+
+
+    <!--Sidebar Section-->
+  <div class="sidebar-section" id="sidebar-section">
+
+    <div class="auto-container">
+      <div class="row clearfix">
+
+            <!--Content Side-->
+        <div class="col-md-9 col-sm-8 col-xs-12 content-side">
+
+            <section class="service-details">
+                <div class="content-outer">
+                    <h2>GIỚI THIỆU NODEJS</h2>
+                    <h3>NODEJS</h3>
+                    <p>NodeJS là một mã nguồn mở, được dùng để xây dựng các ứng dụng mạng, đặc biệt các ứng đòi hỏi real time (thời gian thực) & khối lượng request lớn. Chúng ta có thể lập trình NodeJS với ngôn ngữ JavaScript. NodeJS có thể được dùng để xây dựng hoàn chỉnh một trang web, ngoài ra, NodeJS còn có thể tích hợp để xây dựng các ứng dụng real time trên iOS, Android, Game online với Unity, Cocos2dx.</p>
+                    <p>- Về tốc độ thực thi, Node.js có thể nói là nhanh nhất hiện nay, hơn cả java. Bởi lẽ node.js kế thừa công nghệ V8 của google, khả năng tự build server bằng ngôn ngữ client giúp cho việc trung chuyển dữ liệu diễn ra nhanh hơn. Đồng thời giảm khả năng rủi ro bị ngắt (interupt). Ngoài ra nhờ cơ chế Non I/O Blocking, tận dụng tối đa tài nguyên của server, không tạo ra độ trễ như các ngôn ngữ phía server khác.</p>
+                    <p>- NodeJS thực sự tỏa sáng trong việc xây dựng RESTful API (JSON). Gần như không có ngôn ngữ nào xử lý JSON dễ dàng hơn Javascript, chưa kể các API server thường không phải thực hiện những xử lý nặng nề nhưng lượng concurrent request thì rất cao. Mà Node.js thì xử lý non-blocking. Chẳng còn gì thích hợp hơn Node.js trong trường hợp này!</p>
+                    <p>- NodeJS sinh ra là để xây dựng các ứng dụng thời gian thực (Real time) như ứng dụng chat, các dịch vụ mạng xã hội như Facebook, Twitter,…</p>
+                    <p>- Đối với thiết kế web: NodeJS xử lý mọi request trên cùng một process giúp cho việc xây dựng các bộ nhớ đệm chưa bao giờ đơn giản đến thế: Node.js có thể handle hàng nghìn kết nối đồng thời với chi phí tối thiểu trên 1 quá trình duy nhất.</p>
+                    <p>- NodeJS sử dụng ngôn ngữ JavaScript - một ngôn ngữ phổ biến, và chính điều này đã giúp node.js trở nên quen thuộc và dễ dàng được áp dụng rộng rãi hơn.</p>
+                    <p>NodeJS hiện đang được các đại gia tin tưởng lựa chọn, như là:</p>
+                    <figure class="full-image"><a href="#"><img src="public/images/nodejs/website-using-nodejs.jpg" alt=""></a></figure>
+                    <P>Với những ưu điểm cực kì mạnh mẽ này mà NODEJS đang phát triển một cách chóng mặt, và đây là thời điểm thích hợp nhất để các bạn học NodeJS.</P>
+                    <br>
+    
+                    <h2>MỤC TIÊU KHÓA HỌC</h2>
+                    <p>- Khóa học sẽ giúp bạn làm chủ những kiến thức NODEJS
+                    </p>
+                    <p>- Khóa học đưa bạn tiếp cận với môi trường làm việc thực tế từ A-Z, giúp bạn tự tin khi xin phỏng vấn.</p>
+                    <p>- Hoàn tất khóa học, bạn sẽ có ít nhất 05 project hoàn chỉnh thực tế chạy trên nền tảng NODEJS Trang web thương mại điện tử, app Chat online, Game đa nền tảng iOS + Android + Web.</p>
+                    <p>- Hoàn tất khóa học, bạn sẽ đủ khả năng ứng tuyển vào các công ty Lập trình NodeJS</p>
+                    <h2>ĐỐI TƯỢNG HỌC</h2>
+                    <p>- Các bạn lập trình viên Web: Bạn mong muốn tăng tốc độ trang web của mình, xây dựng các ứng dụng real time. </p>
+                    <p>- Các bạn lập trình Mobile (iOS, Android): Bạn mong muốn xây dựng các ứng dụng real time như chat zalo </p>
+                    <p>- Các bạn yêu thích lập trình Game online tương tác giữa các người chơi với nhau như Slither.io</p>
+                    <p>- Các bạn mong muốn tìm việc làm Lập trình Back-End tại các công ty.</p>
+                    <h2>ĐIỀU KIỆN THEO HỌC</h2>
+                    <p>- Đã biết một ngôn ngữ lập trình bất kì.</p>
+                    <p>- Học viên tự sử dụng laptop của riêng mình trong quá trình học.
+                    </p>
+                    <p>- Khóa học này có thể học trên Win & MAC (Không yêu cầu phải có MAC)
+                      </p>
+                    <h2>BẰNG CẤP - CHỨNG NHẬN</h2>
+                    <p>Tham dự trên 80% số buổi học, và hoàn tất đồ án cuối khóa, học viên sẽ được cấp Chứng nhận hoàn tất khóa học của <strong>Trung Tâm Đào Tạo Tin Học Khoa Phạm</strong>, có giá trị toàn quốc </p>
+                    <h2>THỜI GIAN & HỌC PHÍ</h2>
+                     <p>- <strong>Thời lượng</strong>: 02 tháng. </p>
+                    <p>- <strong>Thời gian học:</strong> Thứ bảy: 8:00 - 12:00 & 13:30 - 16:30</p>
+                     <p>- <strong>Học phí tại Khoa Phạm</strong>: 3.000.000 đồng</p>
+                     <p>- <strong>Địa điểm học</strong>: Trung Tâm Đào Tạo Tin Học Khoa Phạm</p>
+                     <p>TPHCM: 90-92 Lê Thị Riêng, P.Bến Thành, Q1, TPHCM</p>
+                     <p>- <strong>Lưu ý</strong>: Khóa học này chỉ được học trực tiếp tại Khoa Phạm. Không áp dụng HỌC ONLINE/Từ xa     </p>
+                     <div><a href="lichkhaigiang.html" target="_blank"><button type="button" class="btn btn-warning btn-lg">Xem lịch khai giảng</button></a></div><br>
+                     <h2>ĐĂNG KÍ HỌC</h2>
+                     <p>Đăng kí trực tiếp tại Trung Tâm Đào Tạo Tin Học Khoa Phạm.</p>
+                     <p>(90-92 Lê Thị Riêng, P.Bến Thành, Quận 1, TPHCM) - Hotline: 0942764080 </p>
+                     <p>Hoặc đăng kí qua mail: khoaphamtraining@gmail.com</p>
+                     <p>Lưu ý: tiêu đề vui lòng ghi rõ "ĐĂNG KÍ - TÊN KHÓA HỌC / NGÀY KHAI GIẢNG"</p>
+                     <p>Ví dụ: ĐĂNG KÍ KHÓA HỌC PHP/KHAI GIẢNG NGÀY 15/6/2017</p>
+                     <p>Nội dung vui lòng ghi rõ: "Họ tên - SĐT - Địa chỉ"</p>
+                     <p>Ví dụ: Nguyễn Ngọc Hương Hương, 094 276 4080, 90-92 Lê Thị Riêng, P.Bến Thành, Quận 1</p>
+                     <h2>NỘI DUNG KHÓA HỌC LẬP TRÌNH NODEJS</h2>
+                     <h3 style="text-decoration: underline;">Phần A - Lập trình NODEJS</h3>
+                     <h3>Chương 1: Lập trình JavaScript</h3>
+                     <p>Bạn có thể lập trình NODEJS với JavaScript, do đó, ở chương này, chúng ta sẽ làm quen với JavaScript từ cơ bản đến nâng cao. Bạn cố gắng học thật kĩ chương này sẽ giúp bạn đi rất nhanh khi làm việc với ReactJS & React Native.</p>
+                     <h3>Chương 2: Lập trình NodeJS Cơ bản + Nâng cao</h3>
+                     <p>Chúng ta sẽ được học toàn bộ về lập trình NODEJS phía SERVER, quy trình hoạt động của NODEJS.</p>
+                     <p>Chương này gồm 2 phần: Cơ bản & nâng cao.</p>
+                     <p>Bạn có thể tự học trước phần cơ bản qua các bài học sau: (Phần nâng cao học trực tiếp tại lớp)</p>
+                     <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/bZq2vqcvtWA?list=PLzrVYRai0riQXAXJL9rg62tBvwD0ltJn-" frameborder="0" allowfullscreen></iframe></div>
+                     <h3>Chương 3: Web Service: Xây dựng Restful API với NodeJS</h3>
+                     <p>Đây là một trong những phần quan trọng nhất, đặc biệt là đối với những Mobile Developer. Chúng ta sẽ học cách kết nối database MySQL & MongoDB từ NODEJS, và kết quả hiển thị dạng JSON. Đặc biệt, chúng ta sẽ được xây dựng 01 app trên Android & 01 app trên iOS để tương tác với Server NODEJS.</p>
+                     <h3>Chương 4: NodeJS kết nối CSDL MySQL & MongoDB</h3>
+                     <p>Chúng ta sẽ học cách kết nối cơ sở dữ liệu từ NodeJS, cách thực hiện các truy vấn SELECT, INSERT, DELETE, UPDATE với MySQL (Rất thân thuộc với các bạn lập trình PHP).</p>
+                     <h3>Chương 5: Express - Thiết kế trang web hoàn chỉnh với Express</h3>
+                     <p>Ở chương này, chúng ta sẽ học cách xây dựng một trang web hoàn chỉnh với Express. Express là một web application framework for node nó cung cấp cho chúng những rất nhiều tính năng mạnh mẽ trên nền tảng web và các ứng dụng di động. Ngoài ra, Express hỗ trợ các phương thức HTTP và middleware tạo ra 1 API rất mạnh mẽ và sử dụng dễ dàng hơn.</p>
+                     <h3>Chương 6: SocketIO - Xây dựng ứng dụng thời gian thực (RealTime)</h3>
+                     <p>Socket IO là một module giúp cho chúng ta có thể truyền tải dữ liệu từ Client đến Server (hoặc ngược lại) thời gian thực. Ví dụ đang có 100 người sử dụng ứng dụng, chỉ cần 1 người update một file hình lên server, thì ngay lập tức, 999 người còn lại sẽ tự động hiển thị tấm hình đó lên. Chúng ta sẽ học Lập trình Socket IO trên cả 3 nền tảng: Web, iOS & Android.</p>
+                    
+                     <h3 style="text-decoration: underline;">Phần B: Project thực tế</h3>
+                     <h3>Chương 1: Xuất bản một ứng dụng NodeJS & React JS lên Heroku</h3>
+                     <p>Heroku là dịch vụ tốt nhất giúp chúng ta có thể đặt ứng dụng NodeJS. Đặc biệt, Heroku có gói sử dụng free (giới hạn thời gian real time trong 1 ngày), gói free này đủ để tất cả mọi người có thể học cách Deploy ứng dụng NodeJS của mình ra ngoài Internet.</p>
+                     <h3>Chương 2: Xây dựng trang web bán sách online</h3>
+                     <h3>Chương 3: Xây dựng ứng dụng Chat thời gian thực giữa trang web & ứng dụng iOS + Android</h3>
+                     <p>Chúng ta sẽ có 3 dạng chat realtime: Text, Image (gửi hình ảnh) & Audio (Gửi âm thanh).
+                      <p>Đây là demo phần chat Audio (Âm thanh):</p><div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/i5uGx7ygvZw?list=PLzrVYRai0riQYnEdtHW5XqCiBqv83pDDi" frameborder="0" allowfullscreen></iframe></div>
+                     <h3>Chương 4: Thiết kế Game Caro Online</h3>
+                     <h3>Chương 5:Xây dựng ứng dụng Mạng xã hội tương tự Instagram</h3>
+                     <p>Học viên làm đồ án cuối khóa & kết thúc khóa học.</p>
+                     <h2>ỨNG DỤNG MẪU THỰC HÀNH NGAY TẠI LỚP HỌC </h2>
+                     <figure class="full-image"><a href="#"><img src="public/images/nodejs/caro-online.png" alt=""></a></figure>
+                     <figure class="full-image"><a href="#"><img src="public/images/nodejs/Top-7-Best-Photo-Gallery-Apps-for-Android.jpg" alt=""></a></figure>
+                     <figure class="full-image"><a href="#"><img src="public/images/nodejs/appChat.png" alt=""></a></figure>
+                </div>
+
+            </section>
+
+        </div>
+
+            <!--Sidebar-->
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <aside class="sidebar">
+
+                <!--Links Widget-->
+                <div class="widget links-widget">
+                    <h3>KHÓA HỌC KHÁC</h3>
+                    <ul>
+    <li><a href="khoa-hoc-lap-trinh-nodejs.html">Lập trình Nodejs</a></li>
+    <li><a href="khoa-hoc-lap-trinh-react-js.html">Lập trình REACTJS</a></li>
+    <li><a href="khoa-hoc-lap-trinh-react-native.html">Lập trình React Native (IOS & Android)</a></li>
+    <li><a href="khoa-hoc-laptrinhios.html">Lập trình IOS từ A-Z</a></li>
+    <li><a href="khoa-hoc-lap-trinh-android.html">Lập trình Android</a></li>
+    <li><a href="unity.html">Lập trình Game Unity 3D</a></li>
+    <li><a href="lap-trinh-php.html">Lập trình PHP & MySQL</a></li>    
+    <li><a href="lap-trinh-php-nang-cao.html">Lập trình PHP nâng cao</a></li>
+    <li><a href="khoa-hoc-lap-trinh-android-voi-kotlin.html">Lập trình Android với Kotlin</a></li>
+    <!-- <li><a href="khoa-hoc-lap-trinh-cpp.html">Lập trình C++ cơ bản</a></li> -->
+    <li><a href="khoa-hoc-lap-trinh-web-fullstack-javascript-mean.html">Lập trình Fullstack JS MEAN</a></li>
+    <!-- <li><a href="khoa-hoc-seo-master.html">Khóa học SEO Master</a></li> -->
+    <li><a href="khoa-hoc-lap-trinh-angular.html">Khóa học lập trình Angular 4</a></li>
+    <li><a href="khoa-hoc-lap-trinh-front-end.html">Khóa học lập trình Front-end</a></li>
+    <li><a href="khoa-hoc-forex-binary-options.html">Thị trường ngoại hối Forex và Binary Options</a></li>
+    <li><a href="lap-trinh-mql.html">LẬP TRÌNH MQL 4</a></li>
+</ul>                </div>
+
+
+              
+
+            </aside>
+        </div>
+
+    </div>
+    </div>
+  </div>
+
+    
+    <!--Main Footer-->
+    <footer class="main-footer">
+
+        <!--Footer Upper-->
+        <div class="footer-upper">
+        	<!--Go Up Button-->
+            <div class="go-up">
+            	<div class="curve scroll-to-target" data-target="#main-header"><span class="icon fa fa-arrow-up"></span></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget about-widget">
+                            <h2>Khoa Phạm<BR/> chi nhánh TPHCM</h2>
+                            <div class="text">
+                              
+                                90-92 Lê Thị Riêng, P.Bến Thành, Q1, TPHCM
+                                <div class="info-title"><span class="fa fa-phone"></span> Ms.Sìm: 0942 764 080</div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget links">
+                            <h2>Các dịch vụ mà <br/>Khoa Phạm tin tưởng</h2>
+                            <ul>
+                                <li><a target="_blank" href="http://www.tgs.com.vn/">Hosting: www.tgs.com.vn</a></li>
+                                <li><a target="_blank" href="http://dgm.vn/">Digital Marketing: DGM</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget newsletter-widget">
+                            <h2>Nhận tin tức mới</h2>
+                            <div class="text"><p>Chúng tôi sẽ gửi những tin tức, sự kiện
+                            mới nhất cho các bạn qua email này. </p>
+                            </div>
+                            <br>
+                            <div class="form-box">
+                                <form method="post" action="http://khoapham.vn/">
+                                    <div class="form-group">
+                                        <input type="email" name="email" value="" placeholder="Email của bạn..." required>
+                                        <button type="submit" class="btn-submit"><span class="icon fa fa-long-arrow-right"></span></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-info">
+                        <ul>
+                            <li><div class="info-title"><span class="fa fa-phone"></span> Tư vấn khóa học</div><p class="info">0942764080</p></li>
+                            <li><div class="info-title"><span class="fa fa-phone"></span> Góp ý, khiếu nại</div><p class="info">0966908907</p></li>
+                            <li><div class="info-title"><span class="fa fa-at"></span> Email</div><p class="info"><a href="mailto:khoaphamtraining@gmail.com">khoaphamtraining@gmail.com</a></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer Bottom-->
+    	<div class="footer-bottom">
+            <div class="auto-container">
+                <!--Copyright-->
+                <div class="copyright">2017 &copy; KHOA PHẠM CORPORATION. Thiết kế bởi &ensp;<span class="fa fa-heart"></span>&ensp; Khoa Phạm.</div>
+                <div class="social-links">
+                    <a href="https://facebook.com/khoapham.vn" target="_blank" class="icon fa fa-facebook-f"></a>
+                    <a href="https://www.youtube.com/user/khoazend" target="_blank" class="icon fa fa-youtube-play"></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="#main-header"><span class="fa fa-arrow-up"></span></div>
+
+<script src="public/js/jquery.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/revolution.min.js"></script>
+<script src="public/js/js-collection.js"></script>
+<script src="public/js/script.js"></script>
+<script>
+    $(document).ready(function(){
+      //$('nav ul li a').click(function(){ alert(2345);
+       // $('li a').removeClass("current");
+        //$(this).addClass("current");
+    //});
+});
+</script>
+
+</body>
+
+<!-- Mirrored from khoapham.vn/khoa-hoc-lap-trinh-nodejs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Jul 2018 07:10:00 GMT -->
+</html>

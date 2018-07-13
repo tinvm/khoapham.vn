@@ -1,0 +1,168 @@
+.course{
+  margin:15px;
+}
+
+.top-course, .top-course-php, .box-col-6 {
+  border: 1px solid #ebcccc;
+  border-radius: 10px;
+  background-color: #f72c33;
+  color: #fff;
+  z-index: 200
+}
+.top-course{
+  height: 8em;
+}
+.top-course-php{
+  height: 5em;
+}
+
+.top-course p, .top-course-php p{
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+}
+.top-course p{
+  margin-top: 50px;
+}
+.top-course-php p{
+  margin-top: 30px;
+}
+.center-course{
+  height: 350px;
+}
+.col-4, .col-4-2{
+  width: 33.333333%;
+  float: left;
+}
+.subcourse-left-1,.subcourse-right-1,.subcourse-right-2,.subcourse-left-0,.subcourse-left-2,.subcourse-right-0{
+  border: 2px dashed  #f72c33;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #f72c33;
+
+}
+.col-4 img{
+  width: 100%;
+  height: 350px;
+  margin-top: -1px
+}
+.col-4 p, .col-4-2 p,.box-col-6 p{
+  text-align: center;
+  text-transform: uppercase;
+  padding:10px 10%;
+  font-size: 20px;
+  line-height: 25px
+}
+.subcourse-left-1{
+  margin-top: 65px
+}
+
+.subcourse-left-0{
+  margin-top: 40px
+}
+.subcourse-left-2{
+  margin-top: 110px
+}
+.subcourse-right-1{
+  margin-top: 175px
+}
+.subcourse-right-0{
+  margin-top: 130px
+}
+.bottom-course{
+  border: 4px solid #000;
+  background-color: #fff;
+  z-index: 200
+}
+.bottom-course p, .center-course-5 p{
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 25px;
+  padding:10px;
+}
+.center-course-0 .col-6{
+  width: 50%;
+  float: left;
+  margin-top: -1px
+}
+.center-course-0 .col-6 img,.center-course-2 img, .center-course-2-2 img, .col-4-2 img{
+  margin:auto;
+  display: block;
+}
+.box-col-6 {
+  width: 40%;
+  float: left;
+
+}
+.box-col-6-left{
+  float: left;
+}
+.box-col-6-right{
+  float: right;
+}
+.center-course-2{
+  width: 99%
+}
+.center-course-2-2{
+  width: 100%;
+  height: 200px;
+  clear: both;
+}
+.center-course-2-2 img{
+    height: 200px
+}
+.center-course-3{
+  height: 220px;
+}
+.center-course-3 .col-4 img{
+  height: 220px;
+
+}
+.center-course-3 .col-4 .subcourse-left-1{
+  margin-top: 62px
+}
+.center-course-3 .col-4 .subcourse-right-1{
+  margin-top: 10px
+}
+.center-course-3 .col-4 .subcourse-right-2{
+  margin-top: 20px
+}
+.col-4-2 img{
+    height: 225px;
+    margin-top: -1px;
+}
+.col-4-2-right img{
+    float: left;
+}
+.col-4-2-left img{
+    float: right;
+}
+.col-4-2-center .subcourse-left-1{
+    margin-top: 65px
+}
+.center-course-4 .box-col-6, .center-course-5{
+    border: 4px solid #000;
+    background-color: #fff;
+    color: #000;
+    border-radius: unset;
+    height: auto;
+}
+.center-course-4 .box-col-6{
+    width: 40%;
+}   
+.center-course-5{
+    width: 100%;
+    clear: both;
+} 
+.md-50{
+    margin:50px 0;
+    width: 100%;
+    clear: both;
+}

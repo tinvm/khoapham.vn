@@ -1,0 +1,48 @@
+.sec-title p{
+    text-align: left;
+    margin:20px auto;
+    max-width: 740px;
+    color: blue;
+    text-align: justify;
+  }
+  .sec-title h3{
+    color: red
+  }
+  fieldset {
+    border:1px solid green ;
+    border-radius: 5px;
+    padding: 15px 15px 30px;
+    max-width: 80%;
+    margin:0 auto;
+  }
+
+legend {
+    background:#fbca00;
+    width: 300px;
+    padding: 10px ;
+    font-size: 32px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #ddd;
+    margin-left: 20px;
+  }
+  .desc-box{
+    padding-top: 30px
+  }
+
+  video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+   background: url('public/images/forex/FNFDTP.html') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}

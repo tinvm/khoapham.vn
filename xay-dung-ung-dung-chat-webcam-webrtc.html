@@ -1,0 +1,481 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns='https://www.w3.org/1999/xhtml' lang="vi">
+
+<!-- Mirrored from khoapham.vn/xay-dung-ung-dung-chat-webcam-webrtc.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Jul 2018 07:11:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Xây dựng ứng dụng stream online audio và video với webRTC</title>
+    <base  target="_blank, _self, _parent, _top">
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="all" />
+    <meta property="og:image"  content="http://i1.wp.com/khoapham.vn/public/images/livecode/webrtc.jpg"/>
+
+    <meta name="description" content="KhoaPham.Vn cung cấp dịch vụ thiết kế website và ứng dụng trên di động, tư vấn, đào tạo doanh nghiệp thiết kế web với PHP, ASP.NET, lập trình ios, lap trình Android, lập trình WindowsPhone, lập trình SharePoint" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="https://i1.wp.com/khoapham.vn/public/images/logo-370.png" type="image/x-icon" />
+    <link href="https://plus.google.com/100712190640819390373" rel="author" />
+    <meta name="DC.title" content="Phạm Trường Đăng Khoa" />
+    <meta name="geo.placename" content="Thành Phố Hồ Chí Minh" />
+    <meta name="geo.position" content="10.779327,106.685153" />
+    <meta name="ICBM" content="10.779327,106.685153" />
+    <link rel="pingback" href="xmlrpc.html" />
+
+    <!--  -->
+    <meta name="google-site-verification" content="tOiBjDczX4lageu9kJ3lDz7KDvSkgLH4fOIehzv8Xec" />
+
+    <link rel="canonical" href="xay-dung-ung-dung-chat-webcam-webrtc.html">
+    <!-- <meta HTTP-EQUIV="REFRESH" CONTENT="90; URL=https://khoapham.vn/xay-dung-ung-dung-chat-webcam-webrtc.html"> -->
+
+    <link rel="alternate" hreflang="vi" href="xay-dung-ung-dung-chat-webcam-webrtc.html" />
+
+
+    <meta name="mobile-web-app-capable" content="yes">
+<!--[if gte IE 9]>
+<meta name="application-name" content="Khoa Phạm"/>
+<meta name="msapplication-tooltip" content="Trung tâm đào tạo tin học Khoa Phạm"/>
+<meta name="msapplication-window" content="width=1600;height=1200"/>
+<meta name="msapplication-starturl" content="http://khoapham.vn/"/>
+<meta name="msapplication-navbutton-color" content="#202020"/>
+<![endif]-->
+
+<meta property="fb:app_id" content="193765474475887" />
+<meta property="og:site_name" content="khoapham.vn" />
+<meta property='og:title' content='Trung tâm đào tạo tin học Khoa Phạm' /> 
+<meta property="og:description" content="KhoaPham.Vn cung cấp dịch vụ thiết kế website và ứng dụng trên di động, tư vấn, đào tạo doanh nghiệp thiết kế web với PHP, ASP.NET, lập trình ios, lap trình Android, lập trình WindowsPhone, lập trình SharePoint"/>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@khoapham" />
+<meta name="twitter:creator" content="@khoapham" />
+<meta name="twitter:app:name:iphone" content="Khoa Pham Training" />
+<meta name="twitter:app:id:iphone" content="id1172888991" />
+<meta name="twitter:app:name:ipad" content="Khoa Pham Training" />
+<meta name="twitter:app:id:ipad" content="id1172888991" />
+<meta name="twitter:app:name:googleplay" content="Khoa Pham Training" />
+<meta name="twitter:app:id:googleplay" content="com.tienminh.kpt.khoaphamapp" />
+
+<meta content='photo' name='twitter:card' ta-doc-meta='true'/>
+<meta content='Trung tâm đào tạo tin học Khoa Phạm' data-doc-meta='true' name='twitter:title'/>
+<meta content='https://i1.wp.com/khoapham.vn/public/images/livecode/webrtc.jpg' data-doc-meta='true' name='twitter:image'/>
+<meta content='1200' data-doc-meta='true' name='twitter:image:width'/>
+<meta content='630' data-doc-meta='true' name='twitter:image:height'/>
+<meta content='https://khoapham.vn/xay-dung-ung-dung-chat-webcam-webrtc.html' data-doc-meta='true' name='twitter:url'/>
+<meta content='KhoaPham.Vn cung cấp dịch vụ thiết kế website và ứng dụng trên di động, tư vấn, đào tạo doanh nghiệp thiết kế web với PHP, ASP.NET, lập trình ios, lap trình Android, lập trình WindowsPhone, lập trình SharePoint' data-doc-meta='true' name='twitter:description'/>
+
+<meta property="og:image" content="https://i1.wp.com/khoapham.vn/public/images/livecode/webrtc.jpg"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="xay-dung-ung-dung-chat-webcam-webrtc.html" />
+<meta property="article:author" content="Phạm Trường Đăng Khoa" />
+
+<!--  -->
+
+
+
+<!-- Stylesheets -->
+<link href="public/css/bootstrap.min.css" rel="stylesheet">
+<link href="public/css/revolution-slider.css" rel="stylesheet">
+<link href="public/css/style.css" rel="stylesheet">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="public/css/bootstrap-margin-padding.css" rel="stylesheet">
+<link href="public/css/responsive.css" rel="stylesheet">
+<link href="public/css/huong-style.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="public/js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header -->
+    <header class="main-header" id="main-header">
+    	<!-- Header Top -->
+    	<div class="header-top">
+        	<div class="auto-container clearfix">
+            	<!-- Top Left -->
+                <!-- Top Right -->
+                <div class="top-right">
+                	<ul class="clearfix">
+
+                    	<li><a href="#"><span class="fa fa-phone"></span> 0942764080</a></li>
+                        <li><a href="mailto:khoaphamtraining@gmail.com"><span class="fa fa-at"></span> khoaphp@yahoo.com</a></li>
+                        <li><a href="#"><span class="fa fa-map-marker"></span> TPHCM: 90-92 Lê Thị Riêng, P.Bến Thành, Q1, TPHCM</a></li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div><!-- Header Top End -->
+
+        <!-- Header Lower -->
+        <div class="header-lower">
+        	<div class="auto-container clearfix ">
+
+                <!--Outer Box-->
+                <div class="outer-box">
+
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html"><img src="public/images/logo-370.png" alt="Khoa Phạm Training" style="width: 70%"></a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse clearfix" id="menu">
+                          <ul class="navigation">
+                            <li class=""><a href="index.html" class="current">TRANG CHỦ</a>
+                            </li>
+                            <li class=""><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                            <li class=""><a href="lichkhaigiang.html">LỊCH KHAI GIẢNG</a> </li>
+                            <li class="dropdown "><a href="#">Khóa học đang mở</a>
+                              <ul>
+                                <li><a href="khoa-hoc-forex-binary-options.html">THỊ TRƯỜNG NGOẠI HỐI FOREX & BINARY OPTIONS</a></li>
+                                <li><a href="lap-trinh-mql.html">LẬP TRÌNH MQL 4</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-android.html">LẬP TRÌNH ANDROID (CB + NC)</a></li>
+                                <li><a href="khoa-hoc-laptrinhios.html">LẬP TRÌNH IOS (CB + NC)</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-react-native.html">LẬP TRÌNH REACT NATIVE</a></li>
+                                <li><a href="lap-trinh-php.html">LẬP TRÌNH PHP & MYSQL</a></li>
+                                <li><a href="lap-trinh-php-nang-cao.html">LẬP TRÌNH PHP NÂNG CAO</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-front-end.html">LẬP TRÌNH FRONT END</a></li>
+                                <!-- <li><a href="khoa-hoc-seo-master.html">KHOÁ HỌC SEO MASTER</a></li> -->
+                                <li><a href="khoa-hoc-lap-trinh-nodejs.html">LẬP TRÌNH NODEJS</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-angular.html">LẬP TRÌNH ANGULAR 4</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-web-fullstack-javascript-mean.html">LẬP TRÌNH MEAN - FULL STACK JS</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-android-voi-kotlin.html">LẬP TRÌNH ANDROID VỚI KOTLIN<br>Học miễn phí tại Khoa Phạm Online</a></li>
+                                <li><a href="khoa-hoc-lap-trinh-react-js.html">LẬP TRÌNH REACTJS<br>Học miễn phí tại Khoa Phạm Online</a></li>
+                                <!-- <li><a href="khoa-hoc-lap-trinh-cpp.html">LẬP TRÌNH C++<br>Học miễn phí tại Khoa Phạm Online</a></li> -->
+                                <li><a href="unity.html">LẬP TRÌNH GAME UNITY 3D <br>Học miễn phí tại Khoa Phạm Online</a></li>
+
+                                                              </ul>
+                            </li>
+							<li class="abc current"><a href="livecode-khoa-pham.html">LIVECODE<br ><span class="free">Free</span></a></li>
+                            <li class="abc"><a href="http://online.khoapham.vn/" target="_blank">HỌC ONLINE<br><span class="free">Free</span></a>
+                            
+                            </li>
+                            <li class=""><a href="lienhe.html">LIÊN HỆ</a></li>
+                            <!-- <li class=""><a href="dang-ki-hoc.html">ĐĂNG KÍ HỌC</a></li> -->
+                          </ul>
+                        </div>
+                    </nav>
+                    <!-- Main Menu End-->
+                </div>
+            </div>
+        </div><!-- Header Lower End-->
+
+    </header>
+    <!--End Main Header -->
+
+    
+
+
+<script src="public/js/jquery.js"></script>
+<link href="public/css/huong-style.css" rel="stylesheet">
+<script src="public/js/jquery-ui.custom.min.html"></script>
+
+<!--Page Title-->
+  <section class="page-title" style="background-image:url(public/images/livecode/webrtc.jpg);">
+      <div class="auto-container">
+          <h1>LIVECODE WITH KHOA PHẠM</h1>
+
+          <ul class="bread-crumb">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="#">LIVECODE WITH KHOA PHẠM</a></li>
+            <li><a href="#">Xây dựng ứng dụng stream online audio + video với webRTC</a></li>
+          </ul>
+
+      </div>
+
+      <!--Go Down Button-->
+      <div class="go-down">
+          <div class="curve scroll-to-target" data-target="#sidebar-section"><span class="icon fa fa-arrow-down"></span></div>
+      </div>
+
+  </section>
+
+    <!--Desc Box-->
+  <div class="desc-box">
+      <div class="auto-container">
+          <div class="sec-title no-underline">
+              <h3>Xây dựng ứng dụng stream online audio + video với webRTC</h3>
+              <br><br>
+              <iframe width="750" height="460" src="https://www.youtube.com/embed/AgSXv51xFQs" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <!-- ll -->
+          <div class="mota"> 
+            <p>
+            👉 Nội dung:
+            <br>  Hướng dẫn xây dựng ứng dụng webRTC với server signaling với NodeJS - socket.io
+            </p>
+            <p>👉  Đối tượng học:
+            <br>- Đã biết lập trình cơ bản bất kì ngôn ngữ nào & mong muốn tìm hiểu về kỹ thuật real time
+            <br>- Phù hợp với những bạn đã học qua Nodejs và Socket.io.
+            </p>
+           </div>
+          
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Thời gian diễn ra</th>
+                <th>Giảng viên</th>
+                <th>Nội dung chính</th>
+              </tr>
+            </thead>
+            <tbody>
+            
+              <tr>
+                <th scope="row" style="padding:45px 20px">Buổi 1</th>
+                <td>
+                
+                  <p>Bắt đầu:  22h thứ sáu 26/5/2017</p>
+                 <!--  <div class="dangdienra blink">Đang diễn ra</div> -->
+                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="padding: 3px 10px;">
+                  Click để xem
+                  </button>
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                      <div class="modal-dialog modal-lg">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Buổi 1</h4>
+                          </div>
+                          <div class="modal-body">
+                            
+                               <iframe width="640" height="360" src="https://www.youtube.com/embed/kvbCquSkRu8" frameborder="0" allowfullscreen=""></iframe>
+                              
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng lại</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                </td>
+                <td style="width: 15%;">
+                  <img style="margin:5px auto; display: block;" src="public/images/users/pho.jpg" width="80px" class="img-circle">
+                  <div style="text-align: center;">Thầy Nguyễn Văn Phố</div>
+                  </td>
+                <td style="width: 50%">
+                  Giới thiệu về webrtc
+                  <br>Setup webpack
+                  <br>Demo chat webcam với webRTC
+                  <br>Mô hình server signaling
+                </td>
+              </tr>
+              <!-- end -->
+
+              <tr>
+                <th scope="row" style="padding:45px 20px">Buổi 2</th>
+                <td>
+                
+                  <p>Bắt đầu:  22h thứ hai 29/5/2017</p>
+                  
+                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2" style="padding: 3px 10px;">
+                  Click để xem
+                  </button>
+                    <!-- Modal -->
+                    <div id="myModal2" class="modal fade" role="dialog">
+                      <div class="modal-dialog modal-lg">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Buổi 2</h4>
+                          </div>
+                          <div class="modal-body">
+                            
+                              <iframe width="640" height="360" src="https://www.youtube.com/embed/qNwm9Jy54rs" frameborder="0" allowfullscreen=""></iframe>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng lại</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                </td>
+                <td style="width: 15%;">
+                  <img style="margin:5px auto; display: block;" src="public/images/users/pho.jpg" width="80px" class="img-circle">
+                  <div style="text-align: center;">Thầy Nguyễn Văn Phố</div>
+                  </td>
+                <td style="width: 50%">
+                  Xây dựng server signaling sử dụng nodejs và socket.io
+                  <br>Deploy Heroku
+                </td>
+              </tr>
+                <!-- end -->
+                
+
+              <tr>
+                <th scope="row" style="padding:45px 20px">Buổi 3</th>
+                <td>
+                
+                  <p>Bắt đầu:  22h thứ tư 31/5/2017</p>
+                 
+                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal3" style="padding: 3px 10px;">
+                 click để xem
+                  </button>
+                    <!-- Modal -->
+                    <div id="myModal3" class="modal fade" role="dialog">
+                      <div class="modal-dialog modal-lg">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Buổi 3</h4>
+                          </div>
+                          <div class="modal-body">
+                            
+                              <iframe width="640" height="360" src="https://www.youtube.com/embed/mGiFLc_8v2Q" frameborder="0" allowfullscreen=""></iframe>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng lại</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                </td>
+                <td style="width: 15%;">
+                  <img style="margin:5px auto; display: block;" src="public/images/users/pho.jpg" width="80px" class="img-circle">
+                  <div style="text-align: center;">Thầy Nguyễn Văn Phố</div>
+                  </td>
+                <td style="width: 50%">
+                   Tích hợp socket.io
+                </td>
+              </tr>
+                <!-- end -->
+                
+            </tbody>
+          </table>
+              
+      </div>
+  </div>
+
+
+    
+    <!--Main Footer-->
+    <footer class="main-footer">
+
+        <!--Footer Upper-->
+        <div class="footer-upper">
+        	<!--Go Up Button-->
+            <div class="go-up">
+            	<div class="curve scroll-to-target" data-target="#main-header"><span class="icon fa fa-arrow-up"></span></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget about-widget">
+                            <h2>Khoa Phạm<BR/> chi nhánh TPHCM</h2>
+                            <div class="text">
+                              
+                                90-92 Lê Thị Riêng, P.Bến Thành, Q1, TPHCM
+                                <div class="info-title"><span class="fa fa-phone"></span> Ms.Sìm: 0942 764 080</div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget links">
+                            <h2>Các dịch vụ mà <br/>Khoa Phạm tin tưởng</h2>
+                            <ul>
+                                <li><a target="_blank" href="http://www.tgs.com.vn/">Hosting: www.tgs.com.vn</a></li>
+                                <li><a target="_blank" href="http://dgm.vn/">Digital Marketing: DGM</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 column">
+                        <div class="footer-widget newsletter-widget">
+                            <h2>Nhận tin tức mới</h2>
+                            <div class="text"><p>Chúng tôi sẽ gửi những tin tức, sự kiện
+                            mới nhất cho các bạn qua email này. </p>
+                            </div>
+                            <br>
+                            <div class="form-box">
+                                <form method="post" action="http://khoapham.vn/">
+                                    <div class="form-group">
+                                        <input type="email" name="email" value="" placeholder="Email của bạn..." required>
+                                        <button type="submit" class="btn-submit"><span class="icon fa fa-long-arrow-right"></span></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-info">
+                        <ul>
+                            <li><div class="info-title"><span class="fa fa-phone"></span> Tư vấn khóa học</div><p class="info">0942764080</p></li>
+                            <li><div class="info-title"><span class="fa fa-phone"></span> Góp ý, khiếu nại</div><p class="info">0966908907</p></li>
+                            <li><div class="info-title"><span class="fa fa-at"></span> Email</div><p class="info"><a href="mailto:khoaphamtraining@gmail.com">khoaphamtraining@gmail.com</a></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer Bottom-->
+    	<div class="footer-bottom">
+            <div class="auto-container">
+                <!--Copyright-->
+                <div class="copyright">2017 &copy; KHOA PHẠM CORPORATION. Thiết kế bởi &ensp;<span class="fa fa-heart"></span>&ensp; Khoa Phạm.</div>
+                <div class="social-links">
+                    <a href="https://facebook.com/khoapham.vn" target="_blank" class="icon fa fa-facebook-f"></a>
+                    <a href="https://www.youtube.com/user/khoazend" target="_blank" class="icon fa fa-youtube-play"></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="#main-header"><span class="fa fa-arrow-up"></span></div>
+
+<script src="public/js/jquery.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/revolution.min.js"></script>
+<script src="public/js/js-collection.js"></script>
+<script src="public/js/script.js"></script>
+<script>
+    $(document).ready(function(){
+      //$('nav ul li a').click(function(){ alert(2345);
+       // $('li a').removeClass("current");
+        //$(this).addClass("current");
+    //});
+});
+</script>
+
+</body>
+
+<!-- Mirrored from khoapham.vn/xay-dung-ung-dung-chat-webcam-webrtc.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Jul 2018 07:11:21 GMT -->
+</html>
